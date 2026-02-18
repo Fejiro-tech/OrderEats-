@@ -58,17 +58,17 @@ const CheckoutPage = () => {
     return (
         <div className='min-h-screen p-10 bg-black flex justify-center items-start '>
             <div className='w-full max-w-md bg-gray-900 p-6 rounded-lg text-white mt-20'>
-                <h1 className='text-3xl font-bold mb-6 text-center'>Checkout</h1>
+                <h1 className='text-xl md:text-3xl font-bold mb-6 text-center'>Checkout</h1>
 
                 <div className='mb-6'>
-                    <h2 className='font-semibold mb-2 text-xl'>Order Summary</h2>
+                    <h2 className='font-semibold mb-2 text-base md:text-xl'>Order Summary</h2>
                     {cartItems.map((item) => (
                         <div key={item.id} className='bg-gray-800 flex items-center justify-between p-3 rounded mb-2'>
                             <div className='flex items-center gap-2'>
                                 <img src={item.image} alt="" width={30} className="w-6 md:w-10 h-6 md:h-10 rounded-full object-cover"/>
-                                <span>{item.name} x {item.quantity}</span>
+                                <span className='text-sm md:text-base'>{item.name} x {item.quantity}</span>
                             </div>
-                            <span>{item.price * item.quantity}</span>
+                            <span className='text-sm md:text-base'>{item.price * item.quantity}</span>
                         </div>
                     ))}
 
@@ -84,7 +84,7 @@ const CheckoutPage = () => {
                         placeholder='Your Name'
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400"
+                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
                     />
 
                     <input  
@@ -92,7 +92,7 @@ const CheckoutPage = () => {
                         placeholder='Delivery Address'
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400"
+                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
                     />
 
                     <input      
@@ -100,18 +100,18 @@ const CheckoutPage = () => {
                         placeholder='Phone Number'
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400"
+                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
                     />
                     <input      
                         type='email'
                         placeholder='Email'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400"
+                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
                     />
                 </div>
 
-                <button onClick={handlePayment} className="w-full py-3 bg-amber-400 hover:bg-amber-500 text-black font-semibold rounded cursor-pointer">Pay Now</button>
+                <button onClick={handlePayment} className="w-full py-3 bg-amber-400 hover:bg-amber-500 text-black font-semibold rounded cursor-pointer text-sm md:text-base">Pay Now</button>
 
             </div>
         </div>
