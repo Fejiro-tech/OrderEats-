@@ -56,8 +56,8 @@ const CheckoutPage = () => {
     }
 
     return (
-        <div className='min-h-screen p-10 bg-black flex justify-center items-center '>
-            <div className='w-full max-w-md bg-gray-900 p-6 rounded-lg text-white'>
+        <div className='min-h-screen p-10 bg-black flex justify-center items-start '>
+            <div className='w-full max-w-md bg-gray-900 p-6 rounded-lg text-white mt-20'>
                 <h1 className='text-3xl font-bold mb-6 text-center'>Checkout</h1>
 
                 <div className='mb-6'>
