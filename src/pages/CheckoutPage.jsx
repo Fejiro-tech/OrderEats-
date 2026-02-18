@@ -65,7 +65,7 @@ const CheckoutPage = () => {
                     {cartItems.map((item) => (
                         <div key={item.id} className='bg-gray-800 flex items-center justify-between p-3 rounded mb-2'>
                             <div className='flex items-center gap-2'>
-                                <img src={item.image} alt="" width={30} className="w-10 h-10 rounded-full object-cover"/>
+                                <img src={item.image} alt="" width={30} className="w-6 md:w-10 h-6 md:h-10 rounded-full object-cover"/>
                                 <span>{item.name} x {item.quantity}</span>
                             </div>
                             <span>{item.price * item.quantity}</span>
@@ -73,8 +73,8 @@ const CheckoutPage = () => {
                     ))}
 
                     <div className='flex justify-between font-bold text-xl mt-2'>
-                        <span>Total:</span>
-                        <span>{totalPrice}</span>
+                        <span className='text-base md:text-lg'>Total:</span>
+                        <span className='text-base md:text-lg'>{totalPrice}</span>
                     </div>
                 </div>
 
