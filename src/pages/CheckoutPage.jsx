@@ -1,7 +1,7 @@
 import React from 'react'
 import { CartContext } from '../context/CartContext'
 import { useContext, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 
@@ -56,63 +56,67 @@ const CheckoutPage = () => {
     }
 
     return (
-        <div className='min-h-screen p-10 bg-black flex justify-center items-start '>
-            <div className='w-full max-w-md bg-gray-900 p-6 rounded-lg text-white mt-20'>
-                <h1 className='text-xl md:text-3xl font-bold mb-6 text-center'>Checkout</h1>
+        <div className='min-h-screen p-10 bg-black flex  justify-center items-start '>
+            <div className='max-w-md w-full flex flex-col justify-center mt-20'>
+                <Link to="/cart" className='text-amber-300  px-1  underline '> Back to Cart</Link>
 
-                <div className='mb-6'>
-                    <h2 className='font-semibold mb-2 text-base md:text-xl'>Order Summary</h2>
-                    {cartItems.map((item) => (
-                        <div key={item.id} className='bg-gray-800 flex items-center justify-between p-3 rounded mb-2'>
-                            <div className='flex items-center gap-2'>
-                                <img src={item.image} alt="" width={30} className="w-6 md:w-10 h-6 md:h-10 rounded-full object-cover"/>
-                                <span className='text-sm md:text-base'>{item.name} x {item.quantity}</span>
+                <div className='max-w-md w-full bg-gray-900 p-6 rounded-lg text-white mt-2'>
+                    <h1 className='text-xl md:text-3xl font-bold mb-6 text-center'>Checkout</h1>
+
+                    <div className='mb-6'>
+                        <h2 className='font-semibold mb-2 text-base md:text-xl'>Order Summary</h2>
+                        {cartItems.map((item) => (
+                            <div key={item.id} className='bg-gray-800 flex items-center justify-between p-3 rounded mb-2'>
+                                <div className='flex items-center gap-2'>
+                                    <img src={item.image} alt="" width={30} className="w-6 md:w-10 h-6 md:h-10 rounded-full object-cover"/>
+                                    <span className='text-sm md:text-base'>{item.name} x {item.quantity}</span>
+                                </div>
+                                <span className='text-sm md:text-base'>{item.price * item.quantity}</span>
                             </div>
-                            <span className='text-sm md:text-base'>{item.price * item.quantity}</span>
+                        ))}
+
+                        <div className='flex justify-between font-bold text-xl mt-2 '>
+                            <span className='text-base md:text-lg'>Total:</span>
+                            <span className='text-base md:text-lg'>{totalPrice}</span>
                         </div>
-                    ))}
-
-                    <div className='flex justify-between font-bold text-xl mt-2'>
-                        <span className='text-base md:text-lg'>Total:</span>
-                        <span className='text-base md:text-lg'>{totalPrice}</span>
                     </div>
+
+                    <div className='flex flex-col gap-4 mb-4'>
+                        <input 
+                            type="text"
+                            placeholder='Your Name'
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
+                        />
+
+                        <input  
+                            type='text'
+                            placeholder='Delivery Address'
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}
+                            className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
+                        />
+
+                        <input      
+                            type='text'
+                            placeholder='Phone Number'
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
+                        />
+                        <input      
+                            type='email'
+                            placeholder='Email'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
+                        />
+                    </div>
+
+                    <button onClick={handlePayment} className="w-full py-3 bg-amber-400 hover:bg-amber-500 text-black font-semibold rounded cursor-pointer text-sm md:text-base">Pay Now</button>
+
                 </div>
-
-                <div className='flex flex-col gap-4 mb-4'>
-                    <input 
-                        type="text"
-                        placeholder='Your Name'
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
-                    />
-
-                    <input  
-                        type='text'
-                        placeholder='Delivery Address'
-                        value={address}
-                        onChange={(e) => setAddress(e.target.value)}
-                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
-                    />
-
-                    <input      
-                        type='text'
-                        placeholder='Phone Number'
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
-                    />
-                    <input      
-                        type='email'
-                        placeholder='Email'
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 placeholder:text-sm"
-                    />
-                </div>
-
-                <button onClick={handlePayment} className="w-full py-3 bg-amber-400 hover:bg-amber-500 text-black font-semibold rounded cursor-pointer text-sm md:text-base">Pay Now</button>
-
             </div>
         </div>
     )
