@@ -21,7 +21,7 @@ const HomePage = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full lg:w-5/5 flex flex-col justify-center"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold mb-2 leading-tight">
+          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-extrabold mb-2 leading-tight">
             Delicious Meals <span className="text-amber-500">Delivered Fast</span>
           </h1>
 
@@ -31,7 +31,7 @@ const HomePage = () => {
 
           <button 
             onClick={() => navigate("/menu")}
-            className="w-fit bg-amber-500 text-black font-bold px-8 py-4 rounded-full shadow-xl hover:bg-amber-400 transition cursor-pointer">
+            className="w-fit bg-amber-500 text-black font-bold px-4 md:px-8 py-2 md:py-4 rounded-full shadow-xl hover:bg-amber-400 transition cursor-pointer text-sm md:text-base">
             Explore Menu
           </button>
         </motion.div>

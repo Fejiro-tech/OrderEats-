@@ -8,8 +8,8 @@ const FoodGallery = () => {
 
   return (
     <div className=' max-w-360 mx-auto px-16 py-20'>
-        <h2 className='uppercase font-bold text-amber-500 text-3xl text-center mb-2'>Taste the Fire.</h2>
-        <p className='text-center text-gray-400 text-lg mb-'>Just a glimpse of what we offer!</p>
+        <h2 className='uppercase font-bold text-amber-500 text-2xl md:text-3xl text-center mb-2'>Taste the Fire.</h2>
+        <p className='text-center text-gray-400 text-base md:text-lg '>Just a glimpse of what we offer!</p>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 py-10 '>
             {previewFood.map((food) => (

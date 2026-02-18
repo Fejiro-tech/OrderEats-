@@ -10,7 +10,7 @@ export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <nav className="px-6 lg:px-18 py-4 bg-white shadow-md text-black flex justify-between gap-4 items-center z-50 fixed top-0 left-0 w-full">
+    <nav className="px-6 lg:px-18 py-4 bg-white shadow-md text-black flex justify-between items-center z-50 fixed top-0 left-0 w-full">
       <div className="text-2xl md:text-3xl font-bold flex-1">
         <h2>Order<span className="text-amber-500">Eats</span></h2>
       </div>
@@ -55,14 +55,14 @@ export default function Navbar() {
         >
         {/* Close button */}
           <div
-            className="text-white absolute right-4 top-4 text-2xl cursor-pointer"
-            onClick={() => setSidebarOpen(false)}
+            className=" absolute right-4 top-6 text-2xl cursor-pointer bg-amber-300 rounded-full "
+            onClick={() => setSidebarOpen(false)} 
           >
-            ✕
+           <img src="/images/close.png" alt="" width={30}/>
           </div>
 
           {/* Menu items */}
-          <div className="flex flex-col items-center space-y-12 font-bold text-amber-400 text-xl mt-20">
+          <div className="flex flex-col items-center space-y-12 font-bold text-amber-400 text-xl mt-24">
             <Link to="/" onClick={() => setSidebarOpen(false)} className="hover:text-[#FF5722]">
               Home
             </Link>

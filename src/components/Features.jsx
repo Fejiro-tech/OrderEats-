@@ -41,7 +41,7 @@ const Features = () => {
                 className="w-40 h-40 object-cover rounded-full mb-4"
             />
             <h2 className="text-black text-xl font-bold mb-2">{feature.heading}</h2>
-            <p className="text-gray-600">{feature.desc}</p>
+            <p className="text-gray-600 text-sm md:text-base">{feature.desc}</p>
             </motion.div>
         ))}
       </div>

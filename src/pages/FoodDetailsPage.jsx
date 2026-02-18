@@ -51,7 +51,7 @@ export default function FoodDetailsPage() {
         {/* Add To Cart */}
         <button
           onClick={() => addToCart(food, quantity)}
-          className="w-full bg-black hover:bg-gray-900 text-amber-400 font-semibold py-2 md:py-4 rounded transition cursor-pointer text-sm md:text-base"
+          className="w-full bg-black hover:bg-gray-900 text-amber-400 font-semibold py-3 md:py-4 rounded transition cursor-pointer text-sm md:text-base"
         >
           Add to Cart
         </button>
