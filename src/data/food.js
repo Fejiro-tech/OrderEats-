@@ -23,6 +23,31 @@ const foodData = [
         description: "A hearty breakfast with eggs, sausages, baked beans, mushrooms, and toast.",
         mealType: "Breakfast", 
     },
+
+    { 
+        id: 11, 
+        name: "Pineapple Fried Rice", 
+        price: 1800, 
+        image: "/images/friedrice1.jpg", 
+        description: "Fragrant fried rice with juicy pineapple chunks, vegetables, and savory seasonings.",
+        mealType: "main-dish", 
+    },
+    { 
+        id: 12, 
+        name: "Seafood Pasta", 
+        price: 2200, 
+        image: "/images/food1.jpg", 
+        description: "Tender pasta tossed with shrimp, mussels, and a creamy garlic sauce.",
+        mealType: "main-dish",
+    },
+    { 
+        id: 13, 
+        name: "Chocolate Dessert", 
+        price: 2500, 
+        image: "/images/food6.jpg", 
+        description: "Decadent chocolate cake with layers of rich ganache and creamy frosting.",
+        mealType: "appetizer",
+    },
     { 
         id: 4, 
         name: "Pepperoni Pizza", 
@@ -79,30 +104,7 @@ const foodData = [
         description: "Flavorful Nigerian Jollof rice cooked with smoky spices, tomatoes, and peppers.",
         mealType: "main-dish", 
     },
-    { 
-        id: 11, 
-        name: "Pineapple Fried Rice", 
-        price: 1800, 
-        image: "/images/friedrice1.jpg", 
-        description: "Fragrant fried rice with juicy pineapple chunks, vegetables, and savory seasonings.",
-        mealType: "main-dish", 
-    },
-    { 
-        id: 12, 
-        name: "Seafood Pasta", 
-        price: 2200, 
-        image: "/images/food1.jpg", 
-        description: "Tender pasta tossed with shrimp, mussels, and a creamy garlic sauce.",
-        mealType: "main-dish",
-    },
-    { 
-        id: 13, 
-        name: "Chocolate Dessert", 
-        price: 2500, 
-        image: "/images/food6.jpg", 
-        description: "Decadent chocolate cake with layers of rich ganache and creamy frosting.",
-        mealType: "appetizer",
-    },
+    
     { 
         id: 14, 
         name: "Fruit Parfait", 
