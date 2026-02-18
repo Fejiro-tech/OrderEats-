@@ -63,9 +63,9 @@ const CheckoutPage = () => {
                 <div className='mb-6'>
                     <h2 className='font-semibold mb-2 text-xl'>Order Summary</h2>
                     {cartItems.map((item) => (
-                        <div key={item.id} className='bg-gray-800 flex justify-between p-3 rounded mb-2'>
+                        <div key={item.id} className='bg-gray-800 flex items-center justify-between p-3 rounded mb-2'>
                             <div className='flex items-center gap-2'>
-                                <img src={item.image} alt="" width={40} className='rounded-full'/>
+                                <img src={item.image} alt="" width={30} className="w-10 h-10 rounded-full object-cover"/>
                                 <span>{item.name} x {item.quantity}</span>
                             </div>
                             <span>{item.price * item.quantity}</span>
