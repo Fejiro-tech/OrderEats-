@@ -17,7 +17,7 @@ export default function CartPage() {
 
       <div className="w-full max-w-140 mt-20">
 
-        <Link to="/menu" className='text-amber-300 px-1  underline '>Continue Shopping</Link>
+        <Link to="/menu" className='text-amber-300 px-1  underline hover:text-[#FF5722] '>Continue Shopping</Link>
         <div className="w-full max-w-140 bg-white p-3 md:p-6 rounded-lg shadow-lg text-black mt-3 ">
           <h1 className="text-2xl md:text-3xl font-bold  mb-6 text-center">Your Cart</h1>
 

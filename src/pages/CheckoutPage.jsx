@@ -58,7 +58,7 @@ const CheckoutPage = () => {
     return (
         <div className='min-h-screen p-10 bg-black flex  justify-center items-start '>
             <div className='max-w-md w-full flex flex-col justify-center mt-20'>
-                <Link to="/cart" className='text-amber-300  px-1  underline '> Back to Cart</Link>
+                <Link to="/cart" className='text-amber-300  px-1  underline hover:text-[#FF5722]'> Back to Cart</Link>
 
                 <div className='max-w-md w-full bg-gray-900 p-6 rounded-lg text-white mt-2'>
                     <h1 className='text-xl md:text-3xl font-bold mb-6 text-center'>Checkout</h1>
