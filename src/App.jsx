@@ -6,10 +6,11 @@ import Navbar from "./components/Navbar";
 import './App.css'
 import Footer from "./components/Footer";
 import MenuPage from "./pages/MenuPage";
-import ScrollToTop from "./components/scrollToTop";
+
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import { ToastContainer } from "react-toastify";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -18,7 +19,7 @@ function App() {
   
   return (
    <BrowserRouter>
-      <ScrollToTop />
+      <ScrollToTop/>
       <ToastContainer position="top-center"/>
       <div className="min-h-screen flex flex-col bg-black">
         <Navbar />
